@@ -1,0 +1,173 @@
+ScreenManager:
+    HomePage:
+    Q1:
+    Q2:
+    FinalPage:
+
+<HomePage>:
+    name:'home'
+    canvas.before:
+        Rectangle:
+            size:self.size
+            source: 'fon01.jpg'
+    FloatLayout:
+        Button:
+            on_release:app.root.current = 'q1'
+            size: 1, 1
+            size_hint: 0.3, 0.1
+            pos: 70,70
+            pos_hint: {"center_x": 0.5, "bottom": 1}
+            background_normal: ''
+            background_color: '#ff0084'
+            text: 'Start'
+            font_size: 20
+
+<Q1>:
+    name: 'q1'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: ' 1. O`zbekiston Qachon Mustaqillikka Erishgan ?'
+            text_size: self.width, None
+            size_hint: 1, None
+            font_size: self.width/25
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+        Button:
+            text: ' A) 1989-Yil 1-Sentyabr'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (255, 0, 0)
+            on_release: self.color = (1,1,0)
+
+        Button:
+            text: ' B) 1990-Yil 30-Avgust'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (255, 0, 0)
+            on_release: self.color = (1,1,0)
+        
+        Button:
+            text: ' C) 1991-Yil 31-Avgust'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (0,255,0)
+            on_release: self.color = (0,0,0)
+
+        Button:
+            text: ' D) 1992-Yil 1-Sentyabr'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (255, 0, 0)
+            on_release: self.color = (1,1,0)
+
+        AnchorLayout:
+            anchor_y: 'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'home'
+                    background_normal: ''
+                    background_color: '#54105c'
+                    text: 'Back'
+                    font_size: 25
+
+                Button:
+                    on_release:app.root.current = 'q2'
+                    background_normal: ''
+                    background_color: '#ff0084'
+                    text: 'Next'
+                    font_size: 25
+
+
+<Q2>:
+    name: 'q2'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: ' 2. O`zbekiston Konstitutsiyasi Qachon Qabul Qilingan ?'
+            text_size: self.width, None
+            size_hint: 1, None
+            font_size: self.width/25
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+        Button:
+            text: ' A) 1992-Yil 8-Dekabr'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (0, 255, 0)
+            on_release: self.color = (0,0,0)
+
+        Button:
+            text: ' B) 1990-Yil 7-Dekabr'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (255, 0, 0)
+            on_release: self.color = (1,1,0)
+        
+        Button:
+            text: ' C) 1991-Yil 8-Oktyabr'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (255, 0, 0)
+            on_release: self.color = (1,1,0)
+
+        Button:
+            text: ' D) 1993-Yil 8-Dekabr'
+            text_size: self.width, None
+            font_size: self.width/22
+            color: (1,1,0)
+            on_release: self.background_color = (255, 0, 0)
+            on_release: self.color = (1,1,0)
+
+        AnchorLayout:
+            anchor_y: 'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q1'
+                    background_normal: ''
+                    background_color: '#54105c'
+                    text: 'Back'
+                    font_size: 25
+
+                Button:
+                    on_release:app.root.current = 'final'
+                    background_normal: ''
+                    background_color: '#ff0084'
+                    text: 'Next'
+                    font_size: 25
+<FinalPage>:
+    name: 'final'
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: 'fon.jpg'
+
+    FloatLayout:
+        Button:
+            on_release:app.root.current = 'home'
+            size: 1, 1
+            size_hint: 0.3, 0.1
+            pos: 70,70
+            pos_hint: {"center_x": 0.5, "bottom": 1}
+            background_normal: ''
+            background_color: '#ff0084'
+            text: 'Start'
+            font_size: 20
+            
